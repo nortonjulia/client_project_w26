@@ -4,10 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Internship Search Planning</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=DynaPuff:wght@400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/html5reset.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -40,6 +39,7 @@
             <img src="images/UMSI_DesignJam_MixelStudio_11052025_05.jpg" alt="Students and employers network at a career fair.">
         </section>
 
+        <!-- Individual step sections (shown on mobile, hidden on desktop in favor of stepper) -->
         <section class="plan-goals">
             <h2>Step 1: Define Your Goals</h2>
             <ul>
@@ -94,6 +94,107 @@
             <img src="images/UMSI_CareerFair2020_10.jpg" alt="Students networking at a career fair">
         </section>
 
+        <!-- Interactive stepper: shown on desktop (replaces individual step sections) -->
+        <div class="plan-stepper-wrap" aria-label="Internship Search Steps">
+            <h2>Your Internship Search Roadmap</h2>
+            <div class="stepper" id="stepper" role="list">
+
+                <div class="step-item active" data-step="0" role="listitem">
+                    <div class="step-number" aria-hidden="true">1</div>
+                    <div class="step-body">
+                        <h3>Define Your Goals</h3>
+                        <div class="step-content">
+                            <ul>
+                                <li>Identify your career interests and industries you'd like to explore.</li>
+                                <li>Decide what you hope to gain: skills, mentorship, networking, or industry exposure.</li>
+                                <li>Consider location, company size, and culture preferences.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="step-connector" aria-hidden="true"></div>
+
+                <div class="step-item" data-step="1" role="listitem">
+                    <div class="step-number" aria-hidden="true">2</div>
+                    <div class="step-body">
+                        <h3>Update Your Application Materials</h3>
+                        <div class="step-content">
+                            <ul>
+                                <li><strong>Resume:</strong> Highlight relevant experience. See our <a href="resume.html">Resume page</a>.</li>
+                                <li><strong>Cover Letter:</strong> Tailor for each application; explain your interest and value.</li>
+                                <li><strong>Portfolio:</strong> Include links or attachments to showcase your work.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="step-connector" aria-hidden="true"></div>
+
+                <div class="step-item" data-step="2" role="listitem">
+                    <div class="step-number" aria-hidden="true">3</div>
+                    <div class="step-body">
+                        <h3>Research Opportunities</h3>
+                        <div class="step-content">
+                            <ul>
+                                <li>Use <a href="https://si-umich.12twenty.com/Login" target="_blank">UMSI Career Link</a>, LinkedIn, and Handshake to find openings.</li>
+                                <li>Attend <a href="https://careercenter.umich.edu/content/career-center-fairs#Fall2022Events">career fairs</a> and employer info sessions.</li>
+                                <li>Reach out to alumni and faculty for advice and leads.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="step-connector" aria-hidden="true"></div>
+
+                <div class="step-item" data-step="3" role="listitem">
+                    <div class="step-number" aria-hidden="true">4</div>
+                    <div class="step-body">
+                        <h3>Organize Your Search</h3>
+                        <div class="step-content">
+                            <ul>
+                                <li>Track applications, deadlines, and follow-ups using a spreadsheet or project management tool.</li>
+                                <li>Set aside weekly time blocks to research, apply, and prepare for interviews.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="step-connector" aria-hidden="true"></div>
+
+                <div class="step-item" data-step="4" role="listitem">
+                    <div class="step-number" aria-hidden="true">5</div>
+                    <div class="step-body">
+                        <h3>Prepare for Interviews</h3>
+                        <div class="step-content">
+                            <ul>
+                                <li>Review common interview questions for your field.</li>
+                                <li>Practice behavioral interviews using the STAR method (Situation, Task, Action, Result).</li>
+                                <li>Research the company's culture, mission, and values to demonstrate fit.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="step-connector" aria-hidden="true"></div>
+
+                <div class="step-item" data-step="5" role="listitem">
+                    <div class="step-number" aria-hidden="true">6</div>
+                    <div class="step-body">
+                        <h3>Follow Up &amp; Reflect</h3>
+                        <div class="step-content">
+                            <ul>
+                                <li>Send thank-you notes after interviews or informational meetings.</li>
+                                <li>Keep track of lessons learned from each application to improve your next one.</li>
+                                <li>Persistence and reflection are key—don't get discouraged.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="stepper-nav">
+                <button id="btn-prev" disabled aria-label="Previous step">&#8592; Previous</button>
+                <button id="btn-next" aria-label="Next step">Next &#8594;</button>
+            </div>
+        </div>
+
         <section class="plan-resources">
             <h2>Essential Resources</h2>
             <ul>
@@ -112,7 +213,7 @@
                 </li>
                 <li>
                     <strong>How many applications should I submit?</strong><br>
-                    Quality over quantity—apply to roles that match your goals, but aim for a balanced number of applications to maximize opportunities.
+                    Quality over quantity—apply to roles that match your goals, but aim for a balanced number to maximize opportunities.
                 </li>
                 <li>
                     <strong>Should I network for internships?</strong><br>
@@ -141,7 +242,10 @@
 
     <footer>
         <p>University of Michigan School of Information | <a href="https://umich.instructure.com/courses/137916">UMSI Career Development Office</a></p>
+        <p>&copy; <span id="footer-year"></span> Regents of the University of Michigan</p>
     </footer>
 
+    <script src="js/main.js"></script>
+    <script src="js/stepper.js"></script>
 </body>
 </html>
